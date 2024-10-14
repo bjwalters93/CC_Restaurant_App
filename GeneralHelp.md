@@ -14,6 +14,10 @@ To-the-Side-Preview: Ctrl + K, realease, then V_
 ./mvnw spring-boot:run
 ```
 
+#### Runs on port 8080
+
+[http://localhost:8080](http://localhost:8080)
+
 #### Push to Git
 
 ```

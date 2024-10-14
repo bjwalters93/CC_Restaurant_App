@@ -27,7 +27,7 @@ class RestaurantController {
         return restaurantRepository.findAll();
     }
 
-    @PostMapping("/employees")
+    @PostMapping("/newRestaurant")
     Restaurant newEmployee(@RequestBody Restaurant newRestaurant) {
         return restaurantRepository.save(newRestaurant);
     }
