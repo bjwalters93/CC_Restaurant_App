@@ -7,9 +7,9 @@ import com.example.projects.codecademy_portfolio_app.model.Restaurant;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 // import org.springframework.web.bind.annotation.PathVariable;
-// import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 // import org.springframework.web.bind.annotation.PutMapping;
-// import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -22,18 +22,15 @@ class RestaurantController {
         this.restaurantRepository = restaurantRepository;
     }
 
-    // Aggregate root
-    // tag::get-aggregate-root[]
     @GetMapping
     Iterable<Restaurant> getAllRestaurants() {
         return restaurantRepository.findAll();
     }
-    // end::get-aggregate-root[]
 
-    // @PostMapping("/employees")
-    // Employee newEmployee(@RequestBody Employee newEmployee) {
-    // return repository.save(newEmployee);
-    // }
+    @PostMapping("/employees")
+    Restaurant newEmployee(@RequestBody Restaurant newRestaurant) {
+        return restaurantRepository.save(newRestaurant);
+    }
 
     // // Single item
 
