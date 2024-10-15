@@ -3,7 +3,9 @@ package com.example.projects.codecademy_portfolio_app.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+
+import java.util.UUID;
+
 import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -17,8 +19,8 @@ import lombok.Setter;
 @Setter
 public class Restaurant {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    @GeneratedValue
+    private UUID id;
 
     @Column(name = "NAME")
     private String name;
